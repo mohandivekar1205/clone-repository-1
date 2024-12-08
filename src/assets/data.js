@@ -118,7 +118,7 @@ const data = [
                         {
                             "id": 6,
                             "image": "img6",
-                            "artist": "Sid Sriram",
+                            "artist": "Sid Sriram",  
                             "title": "Soul's Echo",
                             "duration": 200
                         },

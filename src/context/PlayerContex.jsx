@@ -1,5 +1,5 @@
 import { createContext, useEffect, useRef, useState } from "react";
-import { songsData } from "../assets/assets";
+import { artistData } from "../assets/assets";
 
 export const PlayerContext = createContext();
 
@@ -11,7 +11,7 @@ const PlayerContextProvider = (props) =>{
 
     // below line set default track and track status
 
-    const [track,setTrack] = useState(songsData[0])
+    const [track,setTrack] = useState(artistData[0])
     const [playStatus,setPlayStatus] = useState(false);
 
     const [time,setTime] = useState({
@@ -37,22 +37,22 @@ const PlayerContextProvider = (props) =>{
     }
 
     const playwithid = async (id) =>{
-        await setTrack(songsData[id]);
+        await setTrack(artistData[id]);
         await audioRef.current.play();
         setPlayStatus(true);
     }
 
     const previous = async () =>{
      if (track.id > 0) {
-        await setTrack(songsData[track.id - 1])
+        await setTrack(artistData[track.id - 1])
         await audioRef.current.play();
         setPlayStatus(true);
     }
 }
 
     const next = async () =>{
-        if (track.id < songsData.length - 1) {
-           await setTrack(songsData[track.id + 1])
+        if (track.id < artistData.length - 1) {
+           await setTrack(artistData[track.id + 1])
            await audioRef.current.play();
            setPlayStatus(true);
        }   

@@ -1,7 +1,7 @@
 import React from 'react'
 import { PlayerContext } from '../context/PlayerContex'
 import { useParams } from 'react-router-dom'
-import { albumsData, assets, songsData } from '../assets/assets';
+import { albumsData, assets, artistData } from '../assets/assets';
 
 const DisplayPodcast = () => {
   return (

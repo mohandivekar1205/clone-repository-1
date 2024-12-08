@@ -21,12 +21,12 @@ function Navbar() {
             <img onClick={() => navigate('/')} src={assets.home_icon} className="w-7 rounded cursor-pointer" />
           </div>
 
-          <div className="flex items-center bg-[#343434] text-white p-2 rounded-full w-full sm:1/3 sm:w-1/2 md:w-1/3 lg:w-1.5/5">
+          <div className="flex items-center bg-[#343434] text-white p-2 rounded-full w-full sm:1/3 md:w-1/3 lg:w-1.5/5">
             <img src={assets.search_icon} className="w-7" />
             <input
               type="text"
               placeholder="What do you want to play?"
-              className="bg-[#343434] focus:outline-none ml-1 flex-grow p-1"
+              className="bg-[#343434] focus:outline-none ml-1 flex-grow p-1 w-full"
             />
           </div>
 

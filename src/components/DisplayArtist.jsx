@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { PlayerContext } from '../context/PlayerContex'
 import { useParams } from 'react-router-dom'
-import { albumsData, assets, songsData } from '../assets/assets';
+import { albumsData, assets, artistData } from '../assets/assets';
 
 
 function DisplayArtist(){
@@ -24,7 +24,7 @@ function DisplayArtist(){
    
       <div className='grid'>
       <h1 className='my-4 font-bold text-2xl'>Popular</h1>
-        {songsData.map((item, index) => (
+        {artistData.map((item, index) => (
           <div key={index} className="grid grid-cols-3 sm:grid-cols-4 gap-2 p-2 items-center">
             <p className="flex text-white">
               <b className="mr-5 text-[#a7a7a7]">{index + 1}</b>

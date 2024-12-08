@@ -1,7 +1,5 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { assets } from '../assets/assets'
-
 import Button from './Button'
 
 function AlbumItem({image,name,desc,id}) {

@@ -1,12 +1,8 @@
 import React from 'react'
-import { albumsData } from '../assets/assets'
+import { albumsData, playlistData, } from '../assets/assets'
 import AlbumItem from './Albumitem'
-
-import { songsData } from '../assets/assets'
-import SongItem from './SongItem'
+import { artistData } from '../assets/assets'
 import ArtistItems from './ArtistItems'
-import { ShowItems } from './ShowItems'
-import DisplayArtist from './DisplayArtist'
 import PlaylistItems from './PlaylistItems'
 import { PodcastItem } from './PodcastItem'
 
@@ -28,18 +24,10 @@ function DisplayHome() {
                 </div>
             </div>
 
-            {/* <div className='mb-4'>
-                <h1 className='my-4 font-bold text-2xl'>Today's Biggest hits</h1>
-                <div className='flex overflow-auto'>
-                    {songsData.map((item, index) =>
-                        (<SongItem key={index} name={item.name} desc={item.desc} id={item.id} image={item.image} />))}
-                </div>
-            </div> */}
-
             <div className='mb-4'>
                 <h1 className='my-4 font-bold text-2xl'>Your Favorite Artist</h1>
                 <div className='flex overflow-auto'>
-                    {songsData.map((item, index) =>
+                    {artistData.map((item, index) =>
                         (<ArtistItems key={index} name={item.name} desc={item.desc} id={item.id} image={item.image} />))}
                 </div>
             </div>
@@ -47,7 +35,7 @@ function DisplayHome() {
             <div className='mb-4'>
                 <h1 className='my-4 font-bold text-2xl'>Episode For You</h1>
                 <div className='flex overflow-auto'>
-                    {albumsData.map((item, index) =>
+                    {playlistData.map((item, index) =>
                         (<PlaylistItems key={index} name={item.name} desc={item.desc} id={item.id} image={item.image} />))}
                 </div>
             </div>
